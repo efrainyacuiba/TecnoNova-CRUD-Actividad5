@@ -1,0 +1,18 @@
+# Archivos generados por .NET
+**/bin/
+**/obj/
+.vs/
+.vscode/
+*.user
+*.suo
+TestResults/
+# Secretos y configuraciones privadas
+.env
+.env.*
+!.env.example
+appsettings.Local.json
+appsettings.Development.json
+secrets.json
+# Sistema operativo
+.DS_Store
+Thumbs.db

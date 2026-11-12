@@ -1,0 +1,16 @@
+@model Producto
+@{
+    ViewData["Title"] = "Eliminar producto";
+}
+<h1>Eliminar producto</h1>
+<p>¿Seguro que quieres eliminar este producto?</p>
+<div class="formulario">
+    <p><strong>Nombre:</strong> @Model.Nombre</p>
+    <p><strong>SKU:</strong> @Model.Sku</p>
+    <p><strong>Precio:</strong> Bs @Model.Precio.ToString("N2")</p>
+    <p><strong>Stock:</strong> @Model.Stock</p>
+    <form asp-action="Delete" asp-route-id="@Model.Id" method="post" class="botones">
+        <button type="submit" class="boton eliminar">Sí, eliminar</button>
+        <a asp-action="Index" class="boton secundario">Cancelar</a>
+    </form>
+</div>

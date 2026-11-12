@@ -1,0 +1,30 @@
+:root { color-scheme: light; font-family: Arial, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #f4f7fa; color: #1b2b3c; }
+.contenedor { max-width: 1050px; padding: 0 20px; margin: 0 auto; }
+header { background: #12345b; color: white; }
+.cabecera { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 19px; padding-bottom: 19px; }
+.logo { color: white; font-weight: bold; font-size: 20px; text-decoration: none; }
+header span { font-size: 13px; opacity: .9; }
+main { min-height: 75vh; padding-top: 35px !important; padding-bottom: 35px !important; }
+h1 { margin-bottom: 7px; } p { line-height: 1.55; }
+.encabezado { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+.boton { display: inline-block; border: 0; border-radius: 5px; background: #1860af; color: white; padding: 11px 16px; text-decoration: none; cursor: pointer; font-size: 15px; }
+.boton:hover { background: #104b8c; }
+.secundario { background: #667789; }
+.eliminar { background: #af3333; }
+.tabla { overflow-x: auto; border-radius: 7px; background: white; margin-top: 20px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 13px; text-align: left; border-bottom: 1px solid #e4e8ed; }
+th { background: #e7edf5; }
+.acciones { white-space: nowrap; }
+.acciones a { margin-right: 12px; color: #125ead; }
+.acciones a.peligro { color: #af3333; }
+.formulario { max-width: 550px; padding: 24px; background: white; border-radius: 7px; display: flex; flex-direction: column; gap: 7px; margin-top: 22px; }
+.formulario label { margin-top: 6px; font-weight: bold; }
+.formulario input, .formulario select { border: 1px solid #afbbc7; padding: 11px; border-radius: 4px; font-size: 15px; width: 100%; }
+.botones { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+.mensaje { background: #e3f5e9; border: 1px solid #a8d6b5; padding: 12px; border-radius: 5px; }
+.error { color: #b12525; font-size: 13px; }
+.vacio { padding: 15px; } footer { color: #607085; padding-bottom: 30px !important; font-size: 13px; }
+@media (max-width: 600px) { .cabecera, .encabezado { align-items: flex-start; flex-direction: column; } th, td { padding: 9px; } }

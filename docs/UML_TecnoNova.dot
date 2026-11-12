@@ -1,0 +1,8 @@
+digraph UML {
+ graph [rankdir=LR, bgcolor="white", pad="0.3", nodesep="0.9"];
+ node [shape=record, fontname="DejaVu Sans", fontsize=14, style="filled", fillcolor="#F6F9FF", color="#31598A", penwidth=1.5];
+ categoria [label="{Categoria|+ Id : int\l+ Nombre : string\l}"];
+ producto [label="{Producto|+ Id : int\l+ Sku : string\l+ Nombre : string\l+ Precio : decimal\l+ Stock : int\l+ CategoriaId : int\l}"];
+ edge [fontname="DejaVu Sans", fontsize=12, color="#354B60", dir=none];
+ categoria -> producto [taillabel="1", headlabel="0..*", label="contiene", labeldistance=2, labelangle=20];
+}

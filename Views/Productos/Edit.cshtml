@@ -1,0 +1,39 @@
+﻿@model Producto
+@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    ViewData["Title"] = "Editar producto";
+    var categorias = (IEnumerable<SelectListItem>)ViewBag.Categorias;
+}
+<h1>Editar producto</h1>
+<p>Modifica los datos y guarda los cambios.</p>
+<form asp-action="Edit" asp-route-id="@Model.Id" method="post" class="formulario">
+    <input type="hidden" asp-for="Id" />
+    <div asp-validation-summary="ModelOnly" class="error"></div>
+    <label asp-for="Sku">CÃ³digo SKU</label>
+    <input asp-for="Sku" />
+    <span asp-validation-for="Sku" class="error"></span>
+
+    <label asp-for="Nombre">Nombre</label>
+    <input asp-for="Nombre" />
+    <span asp-validation-for="Nombre" class="error"></span>
+
+    <label asp-for="CategoriaId">CategorÃ­a</label>
+    <select asp-for="CategoriaId" asp-items="categorias">
+        <option value="0">Selecciona una categorÃ­a</option>
+    </select>
+    <span asp-validation-for="CategoriaId" class="error"></span>
+
+    <label asp-for="Precio">Precio en bolivianos (Bs)</label>
+    <input asp-for="Precio" type="text" inputmode="decimal" placeholder="Ej. 4255,92" />
+    <span asp-validation-for="Precio" class="error"></span>
+
+    <label asp-for="Stock">Stock</label>
+    <input asp-for="Stock" type="number" min="0" step="1" />
+    <span asp-validation-for="Stock" class="error"></span>
+
+    <div class="botones">
+        <button type="submit" class="boton">Guardar cambios</button>
+        <a asp-action="Index" class="boton secundario">Cancelar</a>
+    </div>
+</form>
+

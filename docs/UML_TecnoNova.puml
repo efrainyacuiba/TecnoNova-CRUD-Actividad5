@@ -1,0 +1,17 @@
+@startuml
+hide circle
+skinparam classAttributeIconSize 0
+class Categoria {
+  +Id: int
+  +Nombre: string
+}
+class Producto {
+  +Id: int
+  +Sku: string
+  +Nombre: string
+  +Precio: decimal
+  +Stock: int
+  +CategoriaId: int
+}
+Categoria "1" -- "0..*" Producto : contiene
+@enduml
